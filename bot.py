@@ -1,9 +1,6 @@
 import telebot
-from telebot import types
-import requests
-import json
-
-BOT_TOKEN = "8483855085:AAH9Vi8JZTdm2yOLnYQyn8Bt0YKZCSIGzzE"
+from telebot import 
+BOT_TOKEN = "8164135376:AAGDuNAB_NTk1OPq-oZeP326F_Zd_fTjoJQ"
 QWEN_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBhMmI5MDJjLWY4OTYtNDBmMy04ZDcxLTg4NTkxOGY4MjczMCIsImxhc3RfcGFzc3dvcmRfY2hhbmdlIjoxNzc2MTQ3ODI2LCJleHAiOjE3Nzg3Mzk4NTF9.IuaAN-_qfp9XSybHIAInv8nSY84o_pq039VmV31MXnY"
 
 bot = telebot.TeleBot(BOT_TOKEN)
