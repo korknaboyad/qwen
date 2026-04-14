@@ -4,8 +4,21 @@ import requests
 import json
 import os
 
-BOT_TOKEN = os.getenv("8483855085:AAH9Vi8JZTdm2yOLnYQyn8Bt0YKZCSIGzzE")
-QWEN_API_KEY = os.getenv("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBhMmI5MDJjLWY4OTYtNDBmMy04ZDcxLTg4NTkxOGY4MjczMCIsImxhc3RfcGFzc3dvcmRfY2hhbmdlIjoxNzc2MTQ3ODI2LCJleHAiOjE3Nzg3Mzk4NTF9.IuaAN-_qfp9XSybHIAInv8nSY84o_pq039VmV31MXnY")
+# ========== ЧИТАЕМ ПЕРЕМЕННЫЕ ==========
+BOT_TOKEN = os.environ.get("8483855085:AAH9Vi8JZTdm2yOLnYQyn8Bt0YKZCSIGzzE")
+QWEN_API_KEY = os.environ.get("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBhMmI5MDJjLWY4OTYtNDBmMy04ZDcxLTg4NTkxOGY4MjczMCIsImxhc3RfcGFzc3dvcmRfY2hhbmdlIjoxNzc2MTQ3ODI2LCJleHAiOjE3Nzg3Mzk4NTF9.IuaAN-_qfp9XSybHIAInv8nSY84o_pq039VmV31MXnY")
+
+# Проверка, что переменные загрузились
+if not BOT_TOKEN:
+    print("❌ ОШИБКА: BOT_TOKEN не найден в переменных окружения!")
+    exit(1)
+
+if not QWEN_API_KEY:
+    print("❌ ОШИБКА: QWEN_API_KEY не найден в переменных окружения!")
+    exit(1)
+
+print(f"✅ BOT_TOKEN загружен: {BOT_TOKEN[:20]}...")
+print(f"✅ QWEN_API_KEY загружен: {QWEN_API_KEY[:20]}...")
 
 bot = telebot.TeleBot(BOT_TOKEN)
 history = {}
